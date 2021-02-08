@@ -47,7 +47,7 @@ $ pkg install git
 ```
 and then run the git clone command in your home folder (~/ or /data/data/com.termux/files/home)
 ```
-$ git clone https://github.com/raynoppe/BLACKICEcoder.git 
+$ git clone https://github.com/rifaniponk/BLACKICEcoder.git 
 ```
 
 #### Step 2 (Termux):

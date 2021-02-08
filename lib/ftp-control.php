@@ -28,7 +28,7 @@ function ftpGetList($ftpConn, $directory = '.') {
 			$chunks = preg_split("/\s+/", $row);
 			list($item['rights'], $item['number'], $item['user'], $item['group'], $item['size'], $item['month'], $item['day'], $item['time']) = $chunks;
 			// Also set if this is a dir or file
-			$item['type'] = $chunks[0]{0} === 'd' ? 'directory' : 'file';
+			$item['type'] = $chunks[0][0] === 'd' ? 'directory' : 'file';
 			// Splice the array and finally work out $simpleList and $detailedList
 			array_splice($chunks, 0, 8);
 			$detailedList[implode(" ", $chunks)] = $item;

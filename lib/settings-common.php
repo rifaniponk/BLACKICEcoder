@@ -97,16 +97,16 @@ if (isset($_GET['logout'])) {
 }
 
 // If magic quotes are still on
-if (get_magic_quotes_gpc ()) {
-	function stripslashes_deep($value) {
-		$value = is_array($value) ? array_map('stripslashes_deep', $value) : stripslashes($value);
-		return $value;
-	}
-	$_POST = (isset($_POST) && !empty($_POST)) ? array_map('stripslashes_deep', $_POST) : array();
-	$_GET = (isset($_GET) && !empty($_GET)) ? array_map('stripslashes_deep', $_GET) : array();
-	$_COOKIE = (isset($_COOKIE) && !empty($_COOKIE)) ? array_map('stripslashes_deep', $_COOKIE) : array();
-	$_REQUEST = (isset($_REQUEST) && !empty($_REQUEST)) ? array_map('stripslashes_deep', $_REQUEST) : array();
-}
+// if (get_magic_quotes_gpc ()) {
+// 	function stripslashes_deep($value) {
+// 		$value = is_array($value) ? array_map('stripslashes_deep', $value) : stripslashes($value);
+// 		return $value;
+// 	}
+// 	$_POST = (isset($_POST) && !empty($_POST)) ? array_map('stripslashes_deep', $_POST) : array();
+// 	$_GET = (isset($_GET) && !empty($_GET)) ? array_map('stripslashes_deep', $_GET) : array();
+// 	$_COOKIE = (isset($_COOKIE) && !empty($_COOKIE)) ? array_map('stripslashes_deep', $_COOKIE) : array();
+// 	$_REQUEST = (isset($_REQUEST) && !empty($_REQUEST)) ? array_map('stripslashes_deep', $_REQUEST) : array();
+// }
 
 // Function to handle salted hashing
 define('SALT_LENGTH',12);
